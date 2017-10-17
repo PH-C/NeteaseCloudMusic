@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.tab_container{
+  width: 3.75rem;
+  font-size: 0;
+  //height: 100%;
+}
+.tab_title_wrap{
+  width: 3.75rem;
+  height: 0.4rem;
+  border-bottom: 1px solid #cccccc;
+}
+.tab_title{
+  width: 33%;
+  height: 0.4rem;
+
+  text-align: center;
+  line-height: 0.4rem;
+  font-size: 0.16rem;
+  color: #666;
+  background-color: #FFFFFF;
+  display: inline-block;//注意这里设置行内快时，父元素一定要设置font-size为0
+}
+.active{
+  color: rgb(255, 51, 51);
+}
+.tab_item_wrap{
+  width: 3.75rem;
+  height: 100%;
+}
+.tab_item{
+  width: 3.75rem;
+  //height: 100%;
+  font-size: 0.16rem;
+  text-align: center;
+  //line-height: 100%;
+  display: none;
+}
+
+.show{
+  display: block;
+}

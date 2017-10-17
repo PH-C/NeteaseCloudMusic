@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>珠峰培训 www.zhufengpeixun.cn</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_pgg5jafnob51m7vi.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+        }
+        #app{
+            font-size: 0.14rem;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app"></div>
+<script>
+    var desW=375//设计稿宽度640对应的根节点fontsize是100px即1rem=100px;
+    function refreshRem() {
+        var doc=document.documentElement;
+        var winW=doc.clientWidth;
+        var radio=winW/desW;//设计稿和窗口大小的比例
+//        if(winW>=desW){
+//          doc.style.fontSize='100px';
+//          return
+//        }
+        doc.style.fontSize=100*radio+'px';
+    }
+    refreshRem();
+    window.addEventListener('resize',refreshRem)//监听窗口大小的变化重新计算rem的大小
+
+</script>
+</body>
+</html>
