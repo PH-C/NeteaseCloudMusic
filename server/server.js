@@ -10,7 +10,7 @@ let recommendList=require('./mock/recommendList');
 let newSongs=require('./mock/newSongs');
 let searchRes=require('./mock/searchResult');
 let track=require('./mock/track');
-let songs
+let songs=require
 app.use(session({
     resave:true,
     saveUninitialized:true,
