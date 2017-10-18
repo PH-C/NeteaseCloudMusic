@@ -1,0 +1,43 @@
+.recommendation{
+  position: relative;
+  .recommendation-title{
+    position: absolute;
+    left:0;
+    text-align: center;
+    font-size: .15rem;
+    height: .45rem;
+    line-height: .45rem;
+    color: #333;
+    font-weight: 400;
+  }
+  .recommendation-list{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    .recommend-items{
+      position: relative;
+      top: .45rem;
+      width:1.15rem;
+      padding-bottom: .1rem;
+      margin-right:.1rem;
+      a{
+        color: black;
+      }
+      i{
+        position: absolute;
+        right: .1rem;
+        color:#fff
+        //color: #ffffff;
+      }
+      img{
+        //display:block;
+        width: 1.15rem;
+        height: 1.15rem;
+      }
+      p{
+        font-size: .12rem;
+        padding: .05rem .06rem 0;
+      }
+    }
+  }
+}

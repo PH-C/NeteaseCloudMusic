@@ -13,6 +13,7 @@ import Detail from './Detail/index'
 import Login from './Login/index'
 import Register from './Register/index'
 import Protected from "../components/Protected/index";
+import SongMenuDetail from './SongMenuDetail/index';
 import {ConnectedRouter} from 'react-router-redux'
 import createHashHistory from 'history/createHashHistory'
 const history=createHashHistory();
@@ -33,6 +34,7 @@ export default class App extends Component {
                             <Route path="/detail" component={Detail}/>
                             <Route path="/login" component={Login}/>
                             <Route path="/register" component={Register}/>
+                            <Route path="/songmenudetail" component={SongMenuDetail}/>
                         </Switch>
                     <Tab/>
                     </div>

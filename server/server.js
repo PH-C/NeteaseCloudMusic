@@ -7,7 +7,10 @@ app.listen(3002);
 //获取真实的轮播图数据
 let sliders=require('./mock/sliders');
 let recommendList=require('./mock/recommendList');
-
+let newSongs=require('./mock/newSongs');
+let searchRes=require('./mock/searchResult');
+let track=require('./mock/track');
+let songs
 app.use(session({
     resave:true,
     saveUninitialized:true,
@@ -36,11 +39,30 @@ app.use(function(req,res,next){
 
 app.get('/sliders',function (req,res) {
     res.json(sliders.banners);
-})
+});
 
 app.get('/recommendList',function (req,res) {
     res.json(recommendList.recomList);
-})
+});
+
+app.get('/newsong',function (req,res) {
+    res.json(newSongs.newSongList);
+});
+app.get('/songmenudetail',function (req,res) {
+    res.json(track.playlist);
+});
+app.post('/search',function (req,res) {
+    let songName =req.body.keywords.replace(/(^\s*)|(\s*$)/g, "");
+    let songLists = searchRes.result;
+    let songList=songLists.find(item=>item.highlights[0]==songName);
+    console.log(songList);
+    if(songList){
+        res.json({code:0,success:'查找成功',songList:songList})
+    }else{
+        res.json({code:1,error:'查找失败'})
+    }
+});
+
 let users=[];
 app.post('/login',function (req,res) {
     let user =req.body;
