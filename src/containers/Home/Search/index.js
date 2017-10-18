@@ -116,7 +116,9 @@ export default class Search extends Component {
                                                     <div className="sg-left-bottom">{item.ar[0].name}-{item.al.name}</div>
                                                 </div>
 
-                                                <div className="sg-right"></div>
+                                                <div className="sg-right">
+                                                    <span> </span>
+                                                </div>
                                             </li>
                                         ))
                                     }

@@ -10,7 +10,9 @@ let recommendList=require('./mock/recommendList');
 let newSongs=require('./mock/newSongs');
 let searchRes=require('./mock/searchResult');
 let track=require('./mock/track');
-let songs=require
+let rankList=require('./mock/rankList');
+let playlist=require('./mock/playlist');
+let songs=require('./mock/songs')
 app.use(session({
     resave:true,
     saveUninitialized:true,
@@ -51,6 +53,13 @@ app.get('/newsong',function (req,res) {
 app.get('/songmenudetail',function (req,res) {
     res.json(track.playlist);
 });
+app.get('/rankList',function (req,res) {
+    res.json(rankList.playlist);
+})
+app.get('/playlist',function (req,res) {
+    res.json(playlist.playlists);
+})
+
 app.post('/search',function (req,res) {
     let songName =req.body.keywords.replace(/(^\s*)|(\s*$)/g, "");
     let songLists = searchRes.result;
