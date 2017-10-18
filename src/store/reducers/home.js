@@ -5,7 +5,8 @@
      sliders: [],      // 轮播图数据
      recomList:[],
      playList:[],
-     rankList:[]
+     rankList:[],
+     curLocState:{}
  }
 //导出一个默认的reducer
 export default function (state=initState,action) {
@@ -15,9 +16,11 @@ export default function (state=initState,action) {
         case types.FETCH_RECOMLISTS:
             return {...state,recomList:action.recomList};
         case types.FETCH_PLAYLIST:
-            return {...state,playList:action.playList}
+            return {...state,playList:action.playList};
         case types.FETCH_RANKINGLIST:
-            return {...state,rankList:action.rankList}
+            return {...state,rankList:action.rankList};
+        case types.SETCURLOCATIONSTATE:
+            return {...state,curLocState:action.curLocState};
         default:
             return state;
     }

@@ -1,7 +1,13 @@
 import React, {Component} from 'react'
 import './index.less'
 import Play from '../../images/play.png'
-
+import {connect} from 'react-redux';
+import actions from '../../store/actions/home';
+//装饰者模式
+@connect(
+    state=>state.home,
+    actions
+)
 export default class SongMenuDetail extends Component {
     constructor(){
         super();
@@ -21,11 +27,15 @@ export default class SongMenuDetail extends Component {
             },
         }).then(res=>res.json()).then(res=>{
             this.setState({songList:res.tracks})
+
+
         })
     }
     render() {
         console.log(this.state.songList);
-        let {name, picUrl} = this.props.location.state ? this.props.location.state.list : {};
+        //缓存location
+        this.props.location.state? this.props.setLocationState(this.props.location.state):null;
+        let {name, picUrl} = this.props.location.state ? this.props.location.state.list :JSON.parse(window.sessionStorage.getItem('curLocState')).list;
         return (
             <div>
                 <div className="header">
@@ -63,7 +73,6 @@ export default class SongMenuDetail extends Component {
                                     <div className="content">
                                         <div className="title">{item.name}</div>
                                         <div className="singer">{item.ar[0].name}</div>
-
                                     </div>
                                     <div className="play">
                                         <img src={Play} alt=""/>

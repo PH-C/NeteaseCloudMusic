@@ -42,6 +42,12 @@ export default {
                 })
             })
         }
+    },
+    setLocationState(res){
+        return (dispatch, getState) => {
+            window.sessionStorage.setItem('curLocState',JSON.stringify(res))
+
+        }
     }
 
 
