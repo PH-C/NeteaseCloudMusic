@@ -22,7 +22,7 @@ app.use(session({
 app.use(function (req,res,next) {
     setTimeout(()=>{
         next()
-    },1000)
+    },100)
 })
 //如果客户端要向服务器发送cookie时。绝不对写*
 app.use(function(req,res,next){
@@ -92,4 +92,34 @@ app.post('/register',function (req,res) {
         users.push(user);
         res.json({code:0,success:'用户注册成功'})
     }
+})
+app.post('/exit',function (req,res) {
+    let delUser =req.body;
+    users=users.filter(item=>item.mobile!=delUser.mobile)
+    res.json({code:0,success:'退出成功'})
+})
+
+let collection=[];//[{user:123,likes:[list]}]
+console.log(collection);
+app.post('/collect',function (req, res) {
+    let plays=req.body;//歌单、用户plays.list
+    let hasUser=collection.find((item,index)=>{
+        return item.user==plays.user.mobile
+    })
+    if(hasUser){
+        let col= hasUser.likes.find((item,index)=>{
+            return item.id==plays.list.id;
+        });
+        if(!col) {
+            hasUser.likes.push(plays.list);
+            res.json({code:0,success:'收藏成功',collection:hasUser.likes})
+        }else{
+            res.json({code:1,error:'您已经收藏过了'})
+        }
+    }else{
+        collection.push({user:plays.user.mobile,likes:[plays.list]})
+        res.json({code:0,success:'收藏成功',collection:[plays.list]})
+    }
+
+    console.log(collection);
 })

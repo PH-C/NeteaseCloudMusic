@@ -7,3 +7,6 @@ export function register(user){
 export function login(user){
     return post('/login',user);
 }
+// export function exit(user) {
+//     return post('/exit',user)
+// }

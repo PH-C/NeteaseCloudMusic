@@ -1,4 +1,4 @@
-import {register,login} from "../../api/session";
+import {register,login,exit} from "../../api/session";
 import * as types from '../action-types';
 import {push} from 'react-router-redux'
 export default {
@@ -34,5 +34,20 @@ export default {
 
         }
     }
+    // onExit(user) {
+    //     return function (dispatch, getStatus) {
+    //         exit(user).then(res=>{
+    //             let {code}=res;//code user success error
+    //             dispatch({
+    //                 type: types.SET_EXIT,
+    //                 session: {}
+    //             });
+    //             if (code == 0) {//登陆成功了,跳转到登录页 action creator
+    //                 dispatch(push('/login'));
+    //             }
+    //         })
+    //
+    //     }
+    // }
 }
 

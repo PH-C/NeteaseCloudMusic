@@ -6,7 +6,9 @@
      recomList:[],
      playList:[],
      rankList:[],
-     curLocState:{}
+     curLocState:{},
+     curSongList:[],//当前歌单数据
+     collection:[]
  }
 //导出一个默认的reducer
 export default function (state=initState,action) {
@@ -21,6 +23,10 @@ export default function (state=initState,action) {
             return {...state,rankList:action.rankList};
         case types.SETCURLOCATIONSTATE:
             return {...state,curLocState:action.curLocState};
+        case types.SETCURSONGLIST:
+            return {...state,curSongList:action.curSongList};
+        case types.SET_COLLECTION:
+            return {...state,collection:action.collection};
         default:
             return state;
     }

@@ -23,18 +23,21 @@ export default class RankingList extends Component {
                     {
                         this.props.rankingList.tracks?this.props.rankingList.tracks.map((item,index)=>(
                             index>19?null:
-                                <li key={index} className="rankList-item"><NavLink exact to="/detail" playlist={this.props.rankingList.tracks}>
-                                    <div className={"rank-left "+this.gainClassName(index)}>{index+1}</div>
-                                    <div className="rank-right">
-                                        <div className="sgfr">
-                                            <div className="sgna">{item.name}</div>
-                                            <div className="singer">{item.ar[0].name} - {item.al.name}</div>
+                                <li key={index} className="rankList-item">
+                                    <Link to={{pathname:'/singleplay',single:{item}}}>
+
+                                        <div className={"rank-left "+this.gainClassName(index)}>{index+1}</div>
+                                        <div className="rank-right">
+                                            <div className="sgfr">
+                                                <div className="sgna">{item.name}</div>
+                                                <div className="singer">{item.ar[0].name} - {item.al.name}</div>
+                                            </div>
+                                            <div className="sides">
+                                                <span> </span>
+                                            </div>
                                         </div>
-                                        <div className="sides">
-                                            <span> </span>
-                                        </div>
-                                    </div>
-                                </NavLink> </li>
+                                    </Link>
+                                </li>
                         )):null
                     }
                     </ul>

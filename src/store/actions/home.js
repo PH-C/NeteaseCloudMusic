@@ -46,9 +46,20 @@ export default {
     setLocationState(res){
         return (dispatch, getState) => {
             window.sessionStorage.setItem('curLocState',JSON.stringify(res))
+        }
+    },
+    setCurSongList(res){
+        return (dispatch, getState) => {
+            window.sessionStorage.setItem('curSongList',JSON.stringify(res))
+        }
+    },
 
+    setCollection(res){
+        return(dispatch,getState)=>{
+            dispatch({
+                type:types.SET_COLLECTION,
+                collection:res
+            })
         }
     }
-
-
 }
