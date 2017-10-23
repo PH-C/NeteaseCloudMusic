@@ -13,8 +13,9 @@ NeteaseCloudMusic React
 # 项目结构
 ```
 ├─server——————— 后台server文件 
-| └─mock——————模拟后台请求数据的文件夹 
+├ └─mock——————模拟后台请求数据的文件夹 
 ├─src————————项目文件 
+│ ├─api————–api接口 
 │ ├─components———-公共组件 
 │ │ ├─Tab————–底部菜单组件 
 │ │ │─NavBar————–头部组件 
