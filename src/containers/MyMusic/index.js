@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-// import List from '../../../server/mock/collection'
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom'
+import {HashRouter as Router,Route,Link,Redirect,Switch} from "react-router-dom"
+
 import './index.less'
 @connect(
     state=>state.home
@@ -15,10 +15,8 @@ export default class MyMusic extends Component {
             <div className="mylist">
                 <div className="up-tai">
                     <i className="iconfont icon-left" onClick={()=>this.props.history.goBack()} > </i>
-
                     <p>我的收藏</p>
                 </div>
-                { console.log(this.props.collection)}
                 <ul>
                     {
                         ary.map((list,index)=>(

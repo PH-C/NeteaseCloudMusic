@@ -20,33 +20,25 @@ export default class Profile extends Component {
     }
 
     render() {
-        return (<Router>
-            <div>
-                <div className="profile">
-                    <div className="user-login">
-                        {/*<img src={profile}/>*/}
-                        {/*{*/}
-                            {/*this.props.user?<span>欢迎~{this.props.user.mobile}</span>:<Link to="/login">登录6666</Link>*/}
-                        {/*}*/}
-                        
-                    <div className="wai"></div>
-                        <span className="nei"><img src="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" alt=""/></span>
-                       {/*<input    ref="a" onClick={this.handleClick} className="inp-1" type="button"  defaultValue="手机号登陆"/>*/}
-                        {
-                            this.props.user?<span className="welcome">欢迎~{this.props.user.mobile}</span>:
-                            <button  className="inp-1" > <NavLink  exact to="/login">手机号登陆</NavLink></button>
-                        }
-                        {
-                            this.props.user?<button  onClick={this.handleClick} className="inp-2" > <NavLink  exact to="/login">退出</NavLink></button>:<button  className="inp-2" > <NavLink  exact to="/register">注册</NavLink></button>
+        return (
+            <Router>
+                <div>
+                    <div className="profile">
+                        <div className="user-login">
 
-                        }
+                            <div className="wai"></div>
+                            <span className="nei"><img src="http://p3.music.126.net/tBTNafgjNnTL1KlZMt7lVA==/18885211718935735.jpg" alt=""/></span>
+                            {
+                                this.props.user?<span className="welcome">欢迎~{this.props.user.mobile}</span>:
+                                <button  className="inp-1" > <NavLink  exact to="/login">手机号登陆</NavLink></button>
+                            }
+                            {
+                                this.props.user?<button  onClick={this.handleClick} className="inp-2" > <NavLink  exact to="/login">退出</NavLink></button>:<button  className="inp-2" > <NavLink  exact to="/register">注册</NavLink></button>
+                            }
 
-                        {/*<input ref="b" className="inp-2" type="button" defaultValue="注册" onClick={this.handleClick}/>*/}
-
-
+                        </div>
                     </div>
                 </div>
-            </div>
             </Router>
         )
     }

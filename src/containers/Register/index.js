@@ -13,7 +13,7 @@ import actions from '../../store/actions/session'
 
 export default class Register extends Component {
     handleClick=(e)=>{
-        this.refs.obtn2.style.backgroundColor='#C10719';
+        // this.refs.obtn2.style.backgroundColor='#C10719';
         let mobile=this.refs.mobile.value;
         let password=this.refs.password.value;
         this.props.register({
@@ -24,28 +24,6 @@ export default class Register extends Component {
     render() {
         return (
             <div className="reg">
-                {/*<NavBar title="注册"/>*/}
-                {/*<div className="avatar">*/}
-                    {/*<img src={profile}/>*/}
-                {/*</div>*/}
-
-                {/*<ul className="forms">*/}
-                    {/*<li>*/}
-                        {/*<input ref="mobile" type="text" placeholder="用户名"/>*/}
-                    {/*</li>*/}
-                    {/*<li>*/}
-                        {/*<input ref="password" type="text" placeholder="密码"/>*/}
-                    {/*</li>*/}
-                    {/*<li><Link to="/login">前往登录</Link></li>*/}
-                    {/*<li><button onClick={this.handleClick}>注册</button></li>*/}
-                    {/*<li>*/}
-                        {/*{this.props.error}{this.props.success}*/}
-                    {/*</li>*/}
-                {/*</ul>*/}
-
-
-
-
 
                 <div className="up-tai"><a>
                     <i className="iconfont icon-left" onClick={()=>this.props.history.goBack()} > </i>
@@ -62,15 +40,6 @@ export default class Register extends Component {
 
                 <span className="ospan" className="iconfont icon-shouji" > </span>
                 <b className="ob" className="iconfont icon-suo1"> </b>
-
-                {/*<p className="op">忘记密码？</p>*/}
-
-
-
-            {/*</div>*/}
-
-
-
             </div>
 
         )

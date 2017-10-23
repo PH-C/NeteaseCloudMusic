@@ -14,7 +14,7 @@ import Login from './Login/index'
 import Register from './Register/index'
 import Protected from "../components/Protected/index";
 import SongMenuDetail from './SongMenuDetail/index';
-import Single from '../components/Single/index';
+import Single from './Single/index';
 import {ConnectedRouter} from 'react-router-redux'
 import createHashHistory from 'history/createHashHistory'
 const history=createHashHistory();

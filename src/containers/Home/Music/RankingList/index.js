@@ -24,7 +24,7 @@ export default class RankingList extends Component {
                         this.props.rankingList.tracks?this.props.rankingList.tracks.map((item,index)=>(
                             index>19?null:
                                 <li key={index} className="rankList-item">
-                                    <Link to={{pathname:'/singleplay',single:{item}}}>
+                                    <Link to="/">
 
                                         <div className={"rank-left "+this.gainClassName(index)}>{index+1}</div>
                                         <div className="rank-right">
