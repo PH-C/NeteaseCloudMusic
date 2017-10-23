@@ -49,11 +49,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhufengnodejs/zfpxapp.git"
+    "url": "git+https://github.com/PH-C/NeteaseCloudMusic.git"
   },
   "bugs": {
-    "url": "https://github.com/zhufengnodejs/zfpxapp/issues"
+    "url": "https://github.com/PH-C/NeteaseCloudMusic/issues"
   },
-  "homepage": "https://github.com/zhufengnodejs/zfpxapp#readme",
+  "homepage": "https://github.com/PH-C/NeteaseCloudMusic#readme",
   "description": ""
 }
