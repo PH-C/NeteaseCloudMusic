@@ -54,12 +54,15 @@ NeteaseCloudMusic React
 
 - STEP 1 : 克隆并安装依赖
 
-git clone https://github.com/PH-C/NeteaseCloudMusic.git
-cd NeteaseCloudMusic
-npm init -y
-npm install
+> git clone https://github.com/PH-C/NeteaseCloudMusic.git
+
+> cd NeteaseCloudMusic
+
+> npm init -y
+
+> npm install
 - STEP 2 : npm run dev命令运行前端资源并启动server服务
-http://localhost:8080/#/
+> http://localhost:8080/#/
 # 开发计划
 ## 已完成功能
   登陆注册、推荐列表、歌单列表、排行榜、搜索功能(待优化)、歌单详情页、歌曲播放功能(播放、暂停、上一曲、下一曲)、歌单收藏、歌曲收藏功能
