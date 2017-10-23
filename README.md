@@ -52,13 +52,13 @@ NeteaseCloudMusic React
 ```
 # 项目运行方法
 
-STEP 1 : 克隆并安装依赖
+- STEP 1 : 克隆并安装依赖
 
 git clone https://github.com/PH-C/NeteaseCloudMusic.git
 cd NeteaseCloudMusic
 npm init -y
 npm install
-STEP 2 : npm run dev命令运行前端资源并启动server服务
+- STEP 2 : npm run dev命令运行前端资源并启动server服务
 http://localhost:8080/#/
 # 开发计划
 ## 已完成功能
