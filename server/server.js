@@ -93,11 +93,11 @@ app.post('/register',function (req,res) {
         res.json({code:0,success:'用户注册成功'})
     }
 })
-app.post('/exit',function (req,res) {
-    let delUser =req.body;
-    users=users.filter(item=>item.mobile!=delUser.mobile)
-    res.json({code:0,success:'退出成功'})
-})
+// app.post('/exit',function (req,res) {
+//     let delUser =req.body;
+//     users=users.filter(item=>item.mobile!=delUser.mobile)
+//     res.json({code:0,success:'退出成功'})
+// })
 
 let collection=[];//[{user:123,likes:[list]}]
 console.log(collection);
