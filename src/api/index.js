@@ -12,6 +12,7 @@ export const get=(url)=>{
 }
 
 export const post = (url,body) => {
+
     return fetch(`${HOST}${url}`, {
         method: 'post',
         //默认跨域时为了安全，不携带cookie,加上此选项可以带上cookie

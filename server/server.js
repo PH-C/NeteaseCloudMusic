@@ -123,3 +123,14 @@ app.post('/collect',function (req, res) {
 
     console.log(collection);
 })
+app.post('/getcollect',function (req,res) {
+    let username=req.body.username;
+    let usersCollect=collection.find((item,index)=>{
+        return item.user==username
+    })
+    if(usersCollect){
+        res.json({code:0,success:'获取收藏夹成功',likes:usersCollect.likes})
+    }else{
+        res.json({code:1,error:'null'})
+    }
+})
