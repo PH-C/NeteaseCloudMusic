@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/main.js',//入口文件
   output: {
     filename: 'bundle.js',
-    path: path.resolve('build')//打包后存放的文件名
+    path: path.resolve('build')//上线打包文件
   },
   module: {
     rules: [
