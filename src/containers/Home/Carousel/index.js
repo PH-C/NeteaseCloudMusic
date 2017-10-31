@@ -1,11 +1,7 @@
 import React, {Component} from 'react';
 import ReactSwipe from 'react-swipe';
 import './index.less'
-// let sliders  = [
-//     'http://www.zhufengpeixun.cn/themes/jianmo2/images/wechat.png',
-//     'http://www.zhufengpeixun.cn/themes/jianmo2/images/sjz.png',
-//     'http://www.zhufengpeixun.cn/themes/jianmo2/images/react.png'
-// ];
+
 export default class Carousel extends Component {
     constructor(){
         super()
