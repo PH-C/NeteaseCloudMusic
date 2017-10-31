@@ -84,7 +84,7 @@ export default class Search extends Component {
                         <label className="iconfont icon-glass" htmlFor="searchBox">
                             <span>搜索音乐,歌词,电台</span>
                         </label>
-                        <input type="text" id="searchBox" onClick={this.getNewSongs} onKeyUp={this.onkeySearch} />
+                        <input type="text" id="searchBox" onFocus={this.getNewSongs} onKeyUp={this.onkeySearch} />
                     </div>
 
                     {
