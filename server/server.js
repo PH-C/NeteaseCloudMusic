@@ -11,7 +11,7 @@ let newSongs=require('./mock/newSongs');
 let searchRes=require('./mock/searchResult');
 let track=require('./mock/track');
 let rankList=require('./mock/rankList');
-let playlist=require('./mock/playlist');
+let playlist=require('./mock/playList');
 let songs=require('./mock/songs')
 app.use(session({
     resave:true,
